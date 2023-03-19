@@ -5,7 +5,7 @@ Információk [itt](https://viauac00.github.io/laborok/hf)
 ## Mobil- és webes szoftverek
 ### 2022.10.23
 ### Crypto Tracker
-### Imets Ákos István - (D7H8G6)
+### Imets Ákos István
 ### imets01@gmail.com
 ### Laborvezető: Pintér Petra
 
