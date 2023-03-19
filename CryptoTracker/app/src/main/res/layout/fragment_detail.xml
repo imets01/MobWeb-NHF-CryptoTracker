@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DetailFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/addWatchlistButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="8dp"
+            android:src="@drawable/ic_unchecked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailSymbolTextView"
+            android:layout_width="43dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="BTC" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailAppbar"
+        app:layout_constraintVertical_bias="0.003">
+
+        <TextView
+            android:id="@+id/detailChangeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/detailChangeImageView"
+            app:layout_constraintTop_toBottomOf="@+id/detailPriceTextView"
+            tools:text="2.68%" />
+
+        <TextView
+            android:id="@+id/detailPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/detailImageView"
+            app:layout_constraintTop_toTopOf="@+id/detailImageView"
+            tools:text="$108.56" />
+
+        <ImageView
+            android:id="@+id/detailChangeImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/detailChangeTextView"
+            app:layout_constraintStart_toStartOf="@+id/detailPriceTextView"
+            app:layout_constraintTop_toTopOf="@+id/detailChangeTextView"
+            tools:srcCompat="@drawable/ic_up_arrow" />
+
+        <ImageView
+            android:id="@+id/detailImageView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.234"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.36"
+            tools:ignore="ImageContrastCheck"
+            tools:src="@drawable/bitcoin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extendedFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="24dp"
+        android:text="Buy"
+        app:icon="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailPrice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/volume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Volume 24h:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailTitle"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <TextView
+        android:id="@+id/volumeTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:text="0.988615"
+        app:layout_constraintBottom_toBottomOf="@+id/volume"
+        app:layout_constraintStart_toEndOf="@+id/volume"
+        app:layout_constraintTop_toTopOf="@+id/volume"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/percentage1h"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Percentage Change 1h:"
+        app:layout_constraintStart_toStartOf="@+id/volume"
+        app:layout_constraintTop_toBottomOf="@+id/volume" />
+
+    <TextView
+        android:id="@+id/percentage1hTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.988615"
+        app:layout_constraintBottom_toBottomOf="@+id/percentage1h"
+        app:layout_constraintStart_toStartOf="@+id/volumeTv"
+        app:layout_constraintTop_toBottomOf="@+id/volumeTv"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/percentage24h"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Percentage Change 24h:"
+        app:layout_constraintStart_toStartOf="@+id/percentage1h"
+        app:layout_constraintTop_toBottomOf="@+id/percentage1h" />
+
+    <TextView
+        android:id="@+id/percentage24hTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.988615"
+        app:layout_constraintBottom_toBottomOf="@+id/percentage24h"
+        app:layout_constraintStart_toStartOf="@+id/percentage1hTv"
+        app:layout_constraintTop_toBottomOf="@+id/percentage1hTv"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/percentage7d"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Percentage Change 7d:"
+        app:layout_constraintStart_toStartOf="@+id/percentage24h"
+        app:layout_constraintTop_toBottomOf="@+id/percentage24h" />
+
+    <TextView
+        android:id="@+id/percentage7dTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.988615"
+        app:layout_constraintBottom_toBottomOf="@+id/percentage7d"
+        app:layout_constraintStart_toStartOf="@+id/percentage24hTv"
+        app:layout_constraintTop_toBottomOf="@+id/percentage24hTv"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/percentage30d"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Percentage Change 30d:"
+        app:layout_constraintStart_toStartOf="@+id/percentage7d"
+        app:layout_constraintTop_toBottomOf="@+id/percentage7d" />
+
+    <TextView
+        android:id="@+id/percentage30dTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.988615"
+        app:layout_constraintBottom_toBottomOf="@+id/percentage30d"
+        app:layout_constraintStart_toStartOf="@+id/percentage7dTv"
+        app:layout_constraintTop_toBottomOf="@+id/percentage7dTv"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/marketCap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Market Cap:"
+        app:layout_constraintStart_toStartOf="@+id/percentage30d"
+        app:layout_constraintTop_toBottomOf="@+id/percentage30d" />
+
+    <TextView
+        android:id="@+id/marketCapTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.988615"
+        app:layout_constraintBottom_toBottomOf="@+id/marketCap"
+        app:layout_constraintStart_toStartOf="@+id/percentage30dTv"
+        app:layout_constraintTop_toBottomOf="@+id/percentage30dTv"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/marketCapByTotalSupply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Market Cap By Total Supply:"
+        app:layout_constraintStart_toStartOf="@+id/marketCap"
+        app:layout_constraintTop_toBottomOf="@+id/marketCap" />
+
+    <TextView
+        android:id="@+id/marketCapByTotalSupplyTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.988615"
+        app:layout_constraintBottom_toBottomOf="@+id/marketCapByTotalSupply"
+        app:layout_constraintStart_toStartOf="@+id/marketCapTv"
+        app:layout_constraintTop_toBottomOf="@+id/marketCapTv"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

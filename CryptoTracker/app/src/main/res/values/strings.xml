@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Crypto Tracker</string>
+    <string name="_15m">15 min</string>
+    <string name="_1h">1 h</string>
+    <string name="_4h">4 h</string>
+    <string name="_1d">1 d</string>
+    <string name="_1w">1 w</string>
+    <string name="_1m">1 m</string>
+    <string name="new_purchase_item">New Purchase Item</string>
+    <string name="button_ok">Ok</string>
+    <string name="button_cancel">Cancel</string>
+</resources>
